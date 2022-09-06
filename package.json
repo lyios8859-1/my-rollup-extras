@@ -20,8 +20,7 @@
   },
   "lint-staged": {
     "*.ts": [
-      "pnpm lint",
-      "git add"
+      "pnpm lint"
     ]
   },
   "config": {
