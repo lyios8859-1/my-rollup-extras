@@ -1,0 +1,24 @@
+{
+  "name": "@timly/pkg2",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "exports": {
+    ".": {
+      "require": "./lib/index.cjs",
+      "default": "./lib/index.mjs"
+    }
+  },
+  "main": "./lib/index.cjs",
+  "module": "./lib/index.mjs",
+  "typings": "./lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "dev": "rimraf ./lib && cross-env NODE_ENV=development rollup -c -w",
+    "build": "rimraf ./lib && cross-env NODE_ENV=production rollup -c"
+  },
+  "author": "",
+  "license": "MIT"
+}
