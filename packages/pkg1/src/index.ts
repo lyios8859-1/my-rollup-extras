@@ -5,7 +5,7 @@ export default {
 };
 
 const a = (): void => {
-  console.log('dddddddddd');
+  console.log('pkg1');
 };
 
 console.log(a());
