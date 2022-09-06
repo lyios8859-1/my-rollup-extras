@@ -37,8 +37,8 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm install
-      - run: npm run build
+      - run: npm i -g pnpm && pnpm install
+      - run: pnpm build
 
   publish:
 
@@ -58,11 +58,11 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           scope: '@timly'
       - name: Install
-        run: npm install
+        run: npm i -g pnpm && pnpm install
       - name: Build
-        run: npm run build
+        run: pnpm build
       - name: Release
-        run: npm run release
+        run: pnpm release
         env:
             NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
             GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
