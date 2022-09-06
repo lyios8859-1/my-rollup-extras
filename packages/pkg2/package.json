@@ -17,8 +17,11 @@
   ],
   "scripts": {
     "dev": "rimraf ./lib && cross-env NODE_ENV=development rollup -c -w",
-    "build": "rimraf ./lib && cross-env NODE_ENV=production rollup -c"
+    "build": "rimraf ./lib && cross-env NODE_ENV=production rollup -c",
+    "lint": "pnpm prettier && pnpm eslint",
+    "prettier": "prettier --write ./src",
+    "eslint": "eslint --fix ./src/**"
   },
-  "author": "",
+  "author": "Timly",
   "license": "MIT"
 }

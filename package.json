@@ -5,6 +5,7 @@
     "preinstall": "npx only-allow pnpm",
     "dev": "pnpm --filter=@timly/* run dev",
     "build": "pnpm --filter=@timly/* run build",
+    "lint": "pnpm --filter=@timly/* run lint",
     "commit": "pnpx cz",
     "clear": "rimraf 'packages/*/{lib,node_modules}' && rimraf node_modules",
     "changeset": "changeset",
@@ -19,7 +20,7 @@
   },
   "lint-staged": {
     "*.ts": [
-      "eslint --fix",
+      "pnpm lint",
       "git add"
     ]
   },
@@ -38,11 +39,18 @@
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.5.0",
+    "@typescript-eslint/eslint-plugin": "^5.36.2",
+    "@typescript-eslint/parser": "^5.36.2",
     "commitizen": "^4.2.5",
     "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.23.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.1",
     "is-builtin-module": "^3.2.0",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
     "rimraf": "^3.0.2",
     "rollup": "^2.79.0",
     "rollup-plugin-filesize": "^9.1.2",
