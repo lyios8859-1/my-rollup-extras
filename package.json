@@ -10,7 +10,8 @@
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "pnpm build && pnpm release:only",
-    "release:only": "changeset publish --registry=https://registry.npmjs.com/"
+    "release:only": "changeset publish --registry=https://registry.npmjs.com/",
+    "postinstall": "husky install"
   },
   "packageManager": "pnpm@6.34.0",
   "engines": {
@@ -30,6 +31,8 @@
   "devDependencies": {
     "@babel/core": "^7.19.0",
     "@changesets/cli": "^2.24.4",
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-json": "^4.1.0",
@@ -38,6 +41,7 @@
     "commitizen": "^4.2.5",
     "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.1",
     "is-builtin-module": "^3.2.0",
     "rimraf": "^3.0.2",
     "rollup": "^2.79.0",
