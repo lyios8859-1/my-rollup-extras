@@ -26,6 +26,9 @@
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
+    },
+    "ghooks": {
+      "pre-commit": "pnpm test && pnpm check-coverage"
     }
   },
   "devDependencies": {
