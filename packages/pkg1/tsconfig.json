@@ -36,5 +36,10 @@
       ]
     },
     "esModuleInterop": true
-  }
+  },
+  "references": [
+    {
+      "path": "../../tsconfig.root.json"
+    }
+  ]
 }

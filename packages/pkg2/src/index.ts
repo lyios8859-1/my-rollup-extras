@@ -5,10 +5,10 @@ export default {
   pkgName
 };
 
-const a = (): string => {
+const test = (): string => {
   console.log('pkg2');
 
   return 'pkg2';
 };
 
-console.log(a());
+console.log(test());

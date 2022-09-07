@@ -4,8 +4,8 @@ export default {
   pkgName
 };
 
-const a = (): void => {
+const test = (): void => {
   console.log('pkg1');
 };
 
-console.log(a());
+console.log(test());
